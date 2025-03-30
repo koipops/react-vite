@@ -6,8 +6,12 @@ import './App.css'
 import Header from './Header';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
+import Features from "./Features";
 
-
+const features = [
+  { id: 1, title: "Fast Performance", description: "Built using Vite for lightning-fast updates." },
+  { id: 2, title: "Dark Theme", description: "Sleek dark mode for a modern user experience." }
+];
 
 function App() {
   const [count, setCount] = useState(0);
@@ -37,8 +41,9 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
 
-      <Sidebar />
+      <Features features={features} />
 
+      <Sidebar />
       <Footer />
     </>
   );
